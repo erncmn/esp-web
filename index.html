@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Easy Stacking Planner (ESP) — Konteyner & TIR Yükleme Planlama</title>
+<meta name="description" content="TIR, kamyon ve konteyner için 2D/3D otomatik ve elle yükleme planlama, aks yükü, taşma hesabı, çoklu ekipman ve kurumsal PDF rapor. BILTECH OÜ.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="home">
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<div class="hero-sec"><div class="wrap">
+  <div class="hero">
+    <div>
+      <h1 data-i18n="hero_h1"></h1>
+      <p class="lead" data-i18n="hero_lead"></p>
+      <div class="cta">
+        <a href="#indir" class="btn btn-primary" data-i18n="hero_cta1"></a>
+        <a href="ozellikler.html" class="btn btn-ghost" data-i18n="hero_cta2"></a>
+      </div>
+      <div class="note" data-i18n="hero_note"></div>
+    </div>
+    <div class="shot"><img src="assets/shot-3d.png" alt="3D loading view" style="border-radius:9px;display:block;width:100%"></div>
+  </div>
+</div></div>
+
+<!-- ÖZELLİK KARTLARI -->
+<section><div class="wrap">
+  <h2 data-i18n="h_feat_title"></h2>
+  <p class="sub" data-i18n="h_feat_sub"></p>
+  <div class="feat">
+    <div class="card"><div class="ic">🚚</div><h3 data-i18n="f1_t"></h3><p data-i18n="f1_d"></p></div>
+    <div class="card"><div class="ic">🖐️</div><h3 data-i18n="f2_t"></h3><p data-i18n="f2_d"></p></div>
+    <div class="card"><div class="ic">📦</div><h3 data-i18n="f3_t"></h3><p data-i18n="f3_d"></p></div>
+    <div class="card"><div class="ic">⚖️</div><h3 data-i18n="f4_t"></h3><p data-i18n="f4_d"></p></div>
+    <div class="card"><div class="ic">🔗</div><h3 data-i18n="f5_t"></h3><p data-i18n="f5_d"></p></div>
+    <div class="card"><div class="ic">🏷️</div><h3 data-i18n="f6_t"></h3><p data-i18n="f6_d"></p></div>
+  </div>
+</div></section>
+
+<!-- MARKALI ÇIKTILAR -->
+<section class="alt"><div class="wrap">
+  <h2 data-i18n="h_show_title"></h2>
+  <p class="sub" data-i18n="h_show_sub"></p>
+  <div class="showcase">
+    <figure><img src="assets/shot-report.png" alt="report"><figcaption data-i18n="show_report"></figcaption></figure>
+    <figure><img src="assets/shot-label.png" alt="label"><figcaption data-i18n="show_label"></figcaption></figure>
+  </div>
+</div></section>
+
+<!-- FİYAT TEASER -->
+<section><div class="wrap">
+  <h2 data-i18n="h_price_title"></h2>
+  <p class="sub" data-i18n="h_price_sub"></p>
+  <div style="text-align:center"><a href="fiyatlandirma.html" class="btn btn-primary" data-i18n="h_price_cta"></a></div>
+</div></section>
+
+<!-- İNDİRME (e-posta kapısı) -->
+<section id="indir"><div class="wrap">
+  <div class="buy">
+    <h2 data-i18n="h_dl_title"></h2>
+    <form id="dlForm" class="dl-form" novalidate>
+      <input type="email" id="dlEmail" data-i18n-ph="dl_email" required>
+      <input type="text" id="dlName" data-i18n-ph="dl_name">
+      <input type="text" id="dlCompany" data-i18n-ph="dl_company">
+      <label class="dl-consent"><input type="checkbox" id="dlConsent" required>
+        <span><span data-i18n="dl_consent"></span> (<a href="gizlilik.html" target="_blank" rel="noopener" data-i18n="foot_privacy"></a>).</span></label>
+      <button type="submit" class="btn btn-primary" id="dlBtn" data-i18n="dl_btn"></button>
+      <div id="dlMsg" class="dl-msg"></div>
+    </form>
+    <a href="mailto:info@biltech.ee?subject=ESP Pro Lisans" class="btn btn-ghost" style="margin-top:12px" data-i18n="cta_contact"></a>
+  </div>
+</div></section>
+
+<footer id="site-footer"></footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

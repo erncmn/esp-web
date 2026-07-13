@@ -1,0 +1,139 @@
+/* Easy Stacking Planner — ortak site stili (çok sayfalı, 5 dilli) */
+:root{
+  --navy:#16365c; --navy2:#20548c; --blue:#3d7bd9; --amber:#e8b84e;
+  --ink:#1a2233; --mut:#5b6a82; --line:#dce3ee; --bg:#f5f8fc; --card:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:12px 26px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;border:none;transition:filter .15s}
+.btn-primary{background:var(--amber);color:#221a05}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-nav{background:var(--amber);color:#221a05;padding:9px 18px}
+h2{font-size:27px;text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:var(--mut);margin-bottom:34px;max-width:640px;margin-left:auto;margin-right:auto}
+section{padding:56px 0}
+section.alt{background:#eef3fa}
+
+/* ---- ortak üst menü ---- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(22,54,92,.97);backdrop-filter:blur(6px);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.12)}
+.topbar .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:800;color:#fff}
+.brand .tag{background:var(--blue);font-size:11px;padding:2px 7px;border-radius:6px;letter-spacing:.08em}
+.menu{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.menu a{color:#dbe7f6;font-size:14.5px;font-weight:600;padding:7px 11px;border-radius:8px}
+.menu a:hover{background:rgba(255,255,255,.1);color:#fff}
+.menu a.active{color:#fff;background:rgba(255,255,255,.14)}
+.lang{position:relative}
+.lang-btn{background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:8px;padding:7px 11px;font-size:13.5px;font-weight:700;cursor:pointer}
+.lang-menu{position:absolute;right:0;top:110%;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18);overflow:hidden;display:none;min-width:150px}
+.lang-menu.open{display:block}
+.lang-menu button{display:block;width:100%;text-align:left;background:none;border:none;padding:9px 14px;font-size:14px;color:var(--ink);cursor:pointer}
+.lang-menu button:hover{background:#eef3fa}
+.hamb{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+
+/* ---- hero ---- */
+.hero-sec{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:52px 0 64px}
+.hero h1{font-size:38px;line-height:1.15;margin-bottom:14px}
+.hero p.lead{font-size:17px;color:#cfe0f2;margin-bottom:26px;max-width:520px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .note{margin-top:14px;color:#a9c2df;font-size:13px}
+.shot{background:#0e2440;border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.shot .frame{background:#e9edf4;border-radius:9px;min-height:260px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:13px;text-align:center;padding:16px}
+.page-hero{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;padding:44px 0}
+.page-hero h1{font-size:32px;margin-bottom:6px}
+.page-hero p{color:#cfe0f2;max-width:620px}
+
+/* ---- kartlar ---- */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card .ic{font-size:26px}
+.card h3{font-size:16px;margin:8px 0 6px}
+.card p{color:var(--mut);font-size:14px}
+
+/* ---- karşılaştırma tablo ---- */
+.cmp{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+table.cmp-t{width:100%;border-collapse:collapse}
+.cmp-t th,.cmp-t td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px}
+.cmp-t thead th{background:var(--navy);color:#fff;font-size:14px}
+.cmp-t thead th.pro{background:linear-gradient(135deg,#2a6bbf,var(--navy))}
+.cmp-t th.col,.cmp-t td.col{text-align:center;width:150px}
+.cmp-t td.yes{color:#1f9d55;font-weight:700}
+.cmp-t td.no{color:#c0392b}
+.cmp-t tbody tr:nth-child(even){background:#f7fafd}
+.plan-badge{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:8px;margin-left:6px}
+.bfree{background:var(--line);color:var(--mut)}
+.bpro{background:var(--amber);color:#221a05}
+
+/* ---- fiyat kartları ---- */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:0 auto}
+.plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center}
+.plan.pro{border:2px solid var(--amber);position:relative}
+.plan .pname{font-size:15px;font-weight:800;letter-spacing:.05em;color:var(--navy)}
+.plan .price{font-size:30px;font-weight:900;margin:8px 0}
+.plan .price small{font-size:14px;color:var(--mut);font-weight:600}
+.plan ul{list-style:none;text-align:left;margin:16px 0}
+.plan li{padding:6px 0 6px 26px;position:relative;font-size:14px;color:#2a3547}
+.plan li:before{content:"✓";position:absolute;left:0;color:#1f9d55;font-weight:800}
+.ribbon{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--amber);color:#221a05;font-size:12px;font-weight:800;padding:3px 12px;border-radius:20px}
+
+/* ---- markalı çıktı vitrin ---- */
+.showcase{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;align-items:start;max-width:900px;margin:0 auto}
+.showcase figure{margin:0;text-align:center}
+.showcase img{width:100%;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 40px rgba(22,54,92,.16);background:#fff}
+.showcase figcaption{margin-top:10px;font-size:13.5px;color:var(--mut);font-weight:600}
+@media(max-width:860px){.showcase{grid-template-columns:1fr}}
+
+/* ---- CTA / satın alma ---- */
+.buy{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;border-radius:18px;padding:38px;text-align:center}
+.buy h2{color:#fff}
+.buy p{color:#cfe0f2;max-width:640px;margin:0 auto 22px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}
+.step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px}
+.step .n{width:30px;height:30px;border-radius:50%;background:var(--amber);color:#221a05;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.step h4{font-size:14px;margin-bottom:4px}
+.step p{font-size:12.5px;color:#bcd2ec;margin:0}
+
+/* ---- indirme formu ---- */
+.dl-form{max-width:420px;margin:8px auto 0;display:flex;flex-direction:column;gap:8px}
+.dl-title{font-weight:700;font-size:15px;margin-bottom:2px}
+.dl-form input[type=email],.dl-form input[type=text]{padding:11px 13px;border:1px solid #cdd7e5;border-radius:9px;font-size:14px}
+.dl-consent{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:#cfe0f2;line-height:1.4;text-align:left}
+.dl-consent a{color:#fff;text-decoration:underline}
+.dl-consent input{margin-top:2px}
+.dl-msg{font-size:13px;font-weight:600;min-height:18px}
+.dl-msg.ok{color:#b8f0c8}.dl-msg.err{color:#ffc4bd}
+
+/* ---- SSS ---- */
+.faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.qa{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.qa summary{padding:16px 20px;font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:after{content:"+";color:var(--blue);font-size:20px;font-weight:700}
+.qa[open] summary:after{content:"–"}
+.qa .a{padding:0 20px 16px;color:var(--mut);font-size:14.5px}
+
+/* ---- footer ---- */
+footer{background:var(--navy);color:#9fb4d4;padding:30px 0;font-size:13px}
+.foot-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:#cfe0f2}
+.foot-links{display:flex;gap:14px;flex-wrap:wrap}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding:34px 0}
+  .hero h1{font-size:30px}
+  .feat{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr}
+  .cmp-t th.col,.cmp-t td.col{width:auto}
+  .menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:10px 20px;gap:2px}
+  .menu.open{display:flex}
+  .menu a{padding:11px 8px}
+  .hamb{display:block}
+  .topbar .nav{position:relative}
+}
