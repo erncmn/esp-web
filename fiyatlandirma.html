@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png">
+<link rel="apple-touch-icon" sizes="256x256" href="assets/favicon-256.png">
 <title>Fiyatlandırma — Easy Stacking Planner (ESP)</title>
-<meta name="description" content="Free ve Pro karşılaştırması. Kurulumda 15 gün tam Pro deneme. Offline lisans, kurumsal rapor ve daha fazlası.">
-<link rel="stylesheet" href="assets/site.css">
+<meta name="description" content="BASIC, PRO ve PRO+ karşılaştırması. Kurulumda 15 gün tam Pro deneme. Offline lisans, kurumsal rapor ve grup etiketleri.">
+<link rel="stylesheet" href="assets/site.css?v=20260714g">
 </head>
 <body data-page="pricing">
 <div id="site-nav"></div>
@@ -15,25 +19,33 @@
   <p data-i18n="pp_sub"></p>
 </div></div>
 
-<!-- PLAN KARTLARI -->
+<!-- PLAN KARTLARI (3 kart: BASIC / PRO / PRO+) -->
 <section><div class="wrap">
-  <div class="plans">
-    <div class="plan">
-      <div class="pname" data-i18n="pl_free"></div>
-      <div class="price" data-i18n="pl_free_price"></div>
+  <div class="plans plans-3">
+    <!-- BASIC -->
+    <div class="plan basic">
+      <div class="pname" data-i18n="pl_basic"></div>
+      <div class="price" data-i18n="pl_basic_price"></div>
+      <div class="palt" data-i18n="pl_basic_note"></div>
       <ul>
-        <li data-i18n="pl_free_1"></li>
-        <li data-i18n="pl_free_2"></li>
-        <li data-i18n="pl_free_3"></li>
-        <li data-i18n="pl_free_4"></li>
+        <li data-i18n="pl_basic_1"></li>
+        <li data-i18n="pl_basic_2"></li>
+        <li data-i18n="pl_basic_3"></li>
+        <li data-i18n="pl_basic_4"></li>
+        <li data-i18n="pl_basic_5"></li>
       </ul>
-      <a href="index.html#indir" class="btn btn-primary" style="width:100%" data-i18n="hero_cta1"></a>
+      <div class="plan-btm">
+        <a href="index.html#indir" class="btn btn-navy" style="width:100%" data-i18n="pl_basic_cta"></a>
+        <span class="btn-alt" data-i18n="pl_basic_trial"></span>
+      </div>
     </div>
+
+    <!-- PRO (featured) -->
     <div class="plan pro">
       <div class="ribbon" data-i18n="pl_ribbon"></div>
       <div class="pname" data-i18n="pl_pro"></div>
       <div class="price" data-i18n="pl_pro_price"></div>
-      <div class="sub" style="margin:0 0 4px" data-i18n="pl_pro_note"></div>
+      <div class="palt" data-i18n="pl_pro_note"></div>
       <ul>
         <li data-i18n="pl_pro_1"></li>
         <li data-i18n="pl_pro_2"></li>
@@ -41,13 +53,34 @@
         <li data-i18n="pl_pro_4"></li>
         <li data-i18n="pl_pro_5"></li>
       </ul>
-      <a href="mailto:info@biltech.ee?subject=ESP Pro Lisans" class="btn btn-primary" style="width:100%" data-i18n="cta_contact"></a>
+      <div class="plan-btm">
+        <a href="checkout.html?plan=pro-yearly" class="btn btn-primary" style="width:100%" data-i18n="pl_pro_cta_year"></a>
+        <a href="checkout.html?plan=pro-monthly" class="btn-alt" data-i18n="pl_pro_cta_month"></a>
+      </div>
+    </div>
+
+    <!-- PRO+ -->
+    <div class="plan pplus">
+      <div class="pname" data-i18n="pl_pplus"></div>
+      <div class="price" data-i18n="pl_pplus_price"></div>
+      <div class="palt" data-i18n="pl_pplus_note"></div>
+      <ul>
+        <li data-i18n="pl_pplus_1"></li>
+        <li data-i18n="pl_pplus_2"></li>
+        <li data-i18n="pl_pplus_3"></li>
+        <li data-i18n="pl_pplus_4"></li>
+        <li data-i18n="pl_pplus_5"></li>
+      </ul>
+      <div class="plan-btm">
+        <a href="checkout.html?plan=plus-yearly" class="btn btn-navy" style="width:100%" data-i18n="pl_pplus_cta"></a>
+        <a href="mailto:sales@biltech.ee?subject=ESP%20PRO%2B%20Kurumsal%20Teklif" class="btn-alt" data-i18n="pl_pplus_more"></a>
+      </div>
     </div>
   </div>
-  <p class="sub" style="margin-top:20px">
-    <span style="display:inline-block;background:#eaf3ff;border:1px solid #bcd6f5;border-radius:10px;padding:10px 16px" data-i18n="pp_ref"></span>
+  <p class="sub" style="margin-top:32px">
+    <span style="display:inline-block;background:#EEF3FA;border:1px solid #D3DEEC;border-radius:12px;padding:12px 20px;color:#334155" data-i18n="pp_ref"></span>
   </p>
-</div></section>
+</div></div></section>
 
 <!-- AYRINTILI KARŞILAŞTIRMA -->
 <section class="alt"><div class="wrap">
@@ -55,30 +88,48 @@
   <div class="sub"></div>
   <div class="cmp">
     <table class="cmp-t">
-      <thead><tr>
-        <th data-i18n="c_feature"></th>
-        <th class="col" data-i18n="pl_free"></th>
-        <th class="col pro" data-i18n="pl_pro"></th>
-      </tr></thead>
+      <thead>
+        <tr>
+          <th data-i18n="c_feature"></th>
+          <th class="col">
+            <span data-i18n="pl_basic"></span>
+            <div class="col-price">€0</div>
+          </th>
+          <th class="col pro">
+            <span data-i18n="pl_pro"></span>
+            <div class="col-price">€219 <span class="pp">/ yıl</span></div>
+          </th>
+          <th class="col pplus">
+            <span data-i18n="pl_pplus"></span>
+            <div class="col-price">€890 <span class="pp">/ yıl</span></div>
+          </th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td data-i18n="r1"></td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r2"></td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r3"></td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r4"></td><td class="col" data-i18n="r_std5"></td><td class="col yes" data-i18n="r_all"></td></tr>
-        <tr><td data-i18n="r5"></td><td class="col" data-i18n="r_en"></td><td class="col yes" data-i18n="r_5lang"></td></tr>
-        <tr><td data-i18n="r6"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r7"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r8"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r9"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r10"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r11"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
-        <tr><td data-i18n="r12"></td><td class="col no">—</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r1"></td><td class="col yes">✓</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r2"></td><td class="col yes">✓</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r3"></td><td class="col yes">✓</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r4"></td><td class="col" data-i18n="r_std5"></td><td class="col yes" data-i18n="r_all"></td><td class="col yes" data-i18n="r_all"></td></tr>
+        <tr><td data-i18n="r5"></td><td class="col" data-i18n="r_en"></td><td class="col yes" data-i18n="r_5lang"></td><td class="col yes" data-i18n="r_5lang"></td></tr>
+        <tr><td data-i18n="r6"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r7"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r8"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r9"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r10"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r11"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr><td data-i18n="r12"></td><td class="col no">—</td><td class="col yes">✓</td><td class="col yes">✓</td></tr>
+        <tr class="hl-row">
+          <td><strong>Eşzamanlı PC / Lisans</strong></td>
+          <td class="col">1 PC</td>
+          <td class="col yes">2 PC</td>
+          <td class="col yes">16 PC (8×2)</td>
+        </tr>
       </tbody>
     </table>
   </div>
 </div></section>
 
 <footer id="site-footer"></footer>
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v=20260714g"></script>
 </body>
 </html>
